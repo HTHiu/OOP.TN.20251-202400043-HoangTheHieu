@@ -1,13 +1,13 @@
 package com.hust.kstn.models;
 
 public class DigitalVideoDisc {
-    	private static int nbDigitalVideoDisc =0;
-    	private int id;
 	    private String title;
 	    private String category;
 	    private String director;
 	    private int length;
 	    private double cost;
+		private static int nbDigitalVideoDisc =0;
+		private int id;
 	   
 
 
