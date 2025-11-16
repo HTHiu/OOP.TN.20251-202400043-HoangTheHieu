@@ -1,0 +1,11 @@
+Ý 1:
+Vì sao cần bỏ vào .gitignore:
+
+1, Không cần thiết khi chạy project (có thể tạo lại)
+
+2,Nếu commit lên Git, mỗi người dùng IDE khác sẽ sinh ra file khác → gây xung đột, rác repo
+
+3,Repo nặng và lộn xộn
+
+Ý 2:
+Nếu file đã commit rồi, thì phải xoá chúng khỏi index của Git, nhưng không xóa khỏi máy.
