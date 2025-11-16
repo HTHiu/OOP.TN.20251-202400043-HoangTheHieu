@@ -1,6 +1,7 @@
 package com.hust.kstn.models;
 
-public class Cart {
+
+public class Cart  {
     private static final int MAX_NUMBER_ORDERED = 20;
     private int qtyOrdered;
     private DigitalVideoDisc[] itemsInCart = new DigitalVideoDisc[MAX_NUMBER_ORDERED];
@@ -16,6 +17,29 @@ public class Cart {
             System.out.println("The disc has been added successfully!");
         }
     }
+    public void addDVD(DigitalVideoDisc disc1, DigitalVideoDisc disc2) {
+        if (qtyOrdered +1 >= MAX_NUMBER_ORDERED) {
+            System.out.println("The cart is almost full!");
+        } else {
+            itemsInCart[qtyOrdered] = disc1;
+            qtyOrdered++;
+            itemsInCart[qtyOrdered] = disc2;
+            qtyOrdered++;
+            System.out.println("The disc has been added successfully!");
+        }
+    }
+    public void addDVD(DigitalVideoDisc[] disc) {
+        if (qtyOrdered+ disc.length >= MAX_NUMBER_ORDERED) {
+            System.out.println("The cart is almost full!");
+        } else {
+            for(int i=0;i<disc.length;i++){
+                itemsInCart[qtyOrdered] = disc[i];
+            qtyOrdered++;
+            }
+            System.out.println("The disc has been added successfully!");
+        }
+    }
+
 
 
     public void removeDVD(DigitalVideoDisc disc) {
@@ -58,7 +82,7 @@ public class Cart {
         System.out.println("=== All items in cart ===");
         for (int i = 0; i < qtyOrdered; i++) {
             DigitalVideoDisc item = itemsInCart[i];
-            System.out.println("[Title]: " + item.getTitle() + ", [Cost]: " + item.getCost());
+            System.out.println((i + 1) + ". " + item.toString());
         }
         System.out.println("Total cost: " + calculateTotalCost());
     }
