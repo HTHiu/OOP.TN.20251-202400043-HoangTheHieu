@@ -1,0 +1,2 @@
+Do 2 phương thức đều truyền vào mảng nên gây ra xung đột 
+Cách giải quyết --> em sẽ giữ 1 trong 2 phương thức và xóa đi method còn lại 
