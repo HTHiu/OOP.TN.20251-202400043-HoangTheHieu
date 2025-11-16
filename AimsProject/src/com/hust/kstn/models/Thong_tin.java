@@ -1,5 +1,5 @@
 package com.hust.kstn.models;
 
-public class Stotr {
+public class Thong_tin {
 
 }
