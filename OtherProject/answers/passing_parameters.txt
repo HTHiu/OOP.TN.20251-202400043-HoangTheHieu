@@ -1,0 +1,59 @@
+1, Sau khi chạy phương thức swap(s1, s2) thì tên của 2 học sinh vẫn không thay đổi vì: bản sao của s1, s2 lần lượt được chép vào o1, o2. Khi chạy phương thức thì chỉ thay đổi o1, o2 còn s1, s2 giữ nguyên. 
+--> Từ đó, Java là ngôn ngữ truyền tham trị.
+2, Để phương thức swap hoạt động, swap các thuộc tính:
+Thêm các get, set vào class Student.
+Sửa lại phương thức swap:
+public static void swap(Student s1, Student s2) {
+	int temp1 = s1.getStudentId();
+	String temp2 = s1.getName();
+	s1.setStudentId(s2.getStudentId());
+	s1.setName(s2.getName());
+	s2.setStudentId(temp1);
+	s2.setName(temp2);
+}
+- Sơ đồ minh họa:
+
+Ban đầu:
+   Stack			Heap
+------------		---------------------
+    s1         ->             (1, "Hiu")
+------------   		---------------------
+    s2         ->             (2, "Dat")
+------------   		---------------------
+
+Gọi swap(s1, s2):
+int temp1 = s1.getStudentId();
+String temp2 = s1.getName();
+   Stack			Heap
+------------		---------------------
+    s1         ->             (1, "Hiu")
+------------   		---------------------
+    s2         ->             (2, "Dat")
+------------   		---------------------
+temp1 = 1		
+------------		---------------------
+temp2 = "Hiu"
+
+s1.setStudentId(s2.getStudentId());
+s1.setName(s2.getName());
+   Stack			Heap
+------------		---------------------
+    s1         ->             (2, "Dat")
+------------   		---------------------
+    s2         ->             (2, "Dat")
+------------   		---------------------
+temp1 = 1		
+------------		---------------------
+temp2 = "Hiu"
+
+s2.setStudentId(temp1);
+s2.setName(temp2);
+   Stack			Heap
+------------		---------------------
+    s1         ->             (2, "Dat")
+------------   		---------------------
+    s2         ->             (1, "Hiu")
+------------   		---------------------
+temp1 = 1		
+------------		---------------------
+temp2 = "Hiu"
