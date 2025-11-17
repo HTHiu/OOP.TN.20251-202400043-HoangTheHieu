@@ -1,6 +1,6 @@
 package com.hust.kstn.models;
 
-public class CompactDisc extends Thong_tin {
+public class CompactDisc extends Disc {
     private String[] artists;
     private String[] directors;
     private Track[] tracks = new Track[30];
