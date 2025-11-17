@@ -1,0 +1,1 @@
+Bởi nếu Java cho phép chồng 2 lớp cha ( A extend B,C) sẽ có khả năng cao bị lặp phương thức gây nên lỗi trong Java 

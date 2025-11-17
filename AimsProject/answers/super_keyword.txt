@@ -1,0 +1,1 @@
+Super trong lớp Book để lấy khởi tạo của title, cost, category giống như lớp cha Media của nó 

@@ -3,7 +3,7 @@ package com.hust.kstn.models;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book extends Thong_tin {
+public class Book extends Media {
 	
 	private List<BookAuthor> Authors = new ArrayList<>();
     private int authorCount = 0;
