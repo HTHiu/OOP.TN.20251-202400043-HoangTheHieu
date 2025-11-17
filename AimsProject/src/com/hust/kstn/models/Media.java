@@ -7,11 +7,11 @@ public class Media {
     private String category;
     private static int nbMedia = 0;
 
-    public Media(String title, double cost, String category) {
-        this.id = nbThong_tin++;
+    public Media(String title, String category, double cost) {
+        this.id = nbMedia++;
         this.title = title;
-        this.cost = cost;
         this.category = category;
+        this.cost = cost;
     }
 
     public int getId() {
