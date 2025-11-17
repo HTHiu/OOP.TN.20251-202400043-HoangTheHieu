@@ -7,7 +7,7 @@ public class CompactDisc extends Disc {
     private int trackCount = 0;
 
     public CompactDisc(String title, String category, double cost, String[] artists, String[] directors, Track[] tracks) {
-        super(title, cost, category);
+        super(title, category, cost);
 
         this.artists = new String[artists.length];
         for (int i = 0; i < artists.length; i++)

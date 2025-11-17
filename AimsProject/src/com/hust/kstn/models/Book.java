@@ -10,7 +10,7 @@ public class Book extends Media {
     private int numOfTokens;
     
     public Book(String title, String category, double cost, int numOfTokens, BookAuthor[] authors) {
-        super(title, cost, category);
+        super(title, category, cost);
         this.numOfTokens = numOfTokens;
         for (int i = 0; i < authors.length; i++) 
             if (authors[i] != null) {
