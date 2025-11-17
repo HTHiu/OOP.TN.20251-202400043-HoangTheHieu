@@ -1,38 +1,38 @@
 package com.hust.kstn.models;
 
 public class Thong_tin {
-	private int id;
+    private int id;
     private String title;
     private double cost;
     private String category;
-    private static int nbthong_tin = 0;
-    
+    private static int nbThong_tin = 0;
+
     public Thong_tin(String title, double cost, String category) {
-    	nbthong_tin ++;
-    	this.title= title;
-    	this.cost= cost;
-    	this.category= category;
+        this.id = nbThong_tin++;
+        this.title = title;
+        this.cost = cost;
+        this.category = category;
     }
-    
-    public int getID() {
-    	return id;
+
+    public int getId() {
+        return id;
     }
-    
+
     public String getTitle() {
-    	return title;
+        return title;
     }
-    
+
     public double getCost() {
-    	return cost;
+        return cost;
     }
-    
+
     public String getCategory() {
-    	return category;
+        return category;
     }
-    
+
     @Override
     public String toString() {
-        return "Media" + "[" + this.id + "]"
+        return "Thong_tin" + "[" + this.id + "]"
             + "[" + this.title + "]"
             + "[" + this.cost + "]"
             + "[" + this.category + "]";

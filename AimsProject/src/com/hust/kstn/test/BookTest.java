@@ -9,6 +9,7 @@ public class BookTest {
         BookAuthor author2 = new BookAuthor("Bui Cong Hao", 2006, "Tac gia sach Giai tich 1");
         BookAuthor author3 = new BookAuthor("Nguyen Hong Dat", 2006, "Tac gia Hoc Ba ");
 
+        
         BookAuthor[] authors1 = {author1, author2};
         Book book1 = new Book("Toan cao cap", "Dai cuong", 150000.0, 10000, authors1);
 
